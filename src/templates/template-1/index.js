@@ -5,12 +5,12 @@ import PrereviewImageLeft from "./220-SM837746.jpg"; //
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
 const reviews = [
-    { id: 1, img: review, text: "অবিশ্বাস্য কোয়ালিটি!" },
-    { id: 2, img: review, text: "অসাধারণ ডিজাইন, আমি খুব খুশি!" },
-    { id: 3, img: review, text: "খুব আরামদায়ক এবং সুন্দর!" },
-    { id: 4, img: review, text: "অবিশ্বাস্য কোয়ালিটি!" },
-    { id: 5, img: review, text: "অসাধারণ ডিজাইন, আমি খুব খুশি!" },
-    { id: 6, img: review, text: "খুব আরামদায়ক এবং সুন্দর!" },
+    { id: 1, img: review,  },
+    { id: 2, img: review,  },
+    { id: 3, img: review, },
+    { id: 4, img: review,},
+    { id: 5, img: review, },
+    { id: 6, img: review,  },
 ];
 
 export default function Index() {
