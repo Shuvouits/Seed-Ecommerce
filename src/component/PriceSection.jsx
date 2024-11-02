@@ -2,7 +2,7 @@ import React from 'react';
 
 import cross from "../image/cross.gif"
 
-const PriceSection = () => {
+const PriceSection = ({previousPrice,Price}) => {
   return (
     <div className='price-section mt-5'>
       <div
@@ -14,7 +14,7 @@ const PriceSection = () => {
         <div className=''>
 
           <div className='regular-price'>
-            রেগুলার মূল্য <span className="crossed-price">১১০০</span>
+            রেগুলার মূল্য <span className="crossed-price">{previousPrice}</span>
             <span className='cross'>
 
             <img src={cross}
@@ -37,7 +37,7 @@ style={{
 
         {/* Discounted Price with Circle Animation */}
         <div className='primary-color discount-price'>
-          বর্তমান ডিসকাউন্ট মূল্য <span className="circled-price">৯০০</span> টাকা
+          বর্তমান ডিসকাউন্ট মূল্য <span className="circled-price">{Price}</span> টাকা
         </div>
       </div>
 

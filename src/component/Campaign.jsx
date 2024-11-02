@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
-function Campaign() {
+function Campaign({dateandtime}) {
+    console.log(dateandtime)
     const [timeLeft, setTimeLeft] = useState({
         days: 0,
         hours: 0,
@@ -9,7 +10,7 @@ function Campaign() {
     });
 
     const calculateTimeLeft = () => {
-        const targetDate = new Date("2024-12-31T23:59:59"); // Replace with your target date
+        const targetDate = new Date(dateandtime); // Replace with your target date
         const now = new Date();
         const difference = targetDate - now;
 
