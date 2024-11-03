@@ -6,7 +6,7 @@ import Content from '../../component/Content'
 import Cart from '../../component/Cart'
 import PriceSection from '../../component/PriceSection'
 
-function Home({ productData }) {
+function Home({ productData,Setting }) {
 
  
   return (
@@ -46,7 +46,7 @@ function Home({ productData }) {
 
       <Content section_title={productData?.section_title} product_description={productData?.product_description} productImage={productData?.first_image} />
 
-      <Cart />
+      <Cart product={productData} Setting={Setting} />
 
 
     </>
