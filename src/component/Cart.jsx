@@ -97,7 +97,8 @@ function Cart({ product, Setting }) {
                 <div className='cart-container'>
                     <div className='row'>
                         <div className='col-md-12'>
-                            <h5>Customer Information</h5>
+                            <h5 className='title'>অর্ডারটি কনফার্ম করতে আপনার নাম, ঠিকানা, মোবাইল নাম্বার লিখে অর্ডার কনফার্ম করুন বাটনে ক্লিক করুন অর্ডার কনফার্ম করুন বাটনে ক্লিক করুন
+                            </h5>
                             <form onSubmit={handleSubmit} className='mt-5'>
                                 <div className='col-md-12 row'>
                                     <div className='col-md-6'>
@@ -218,7 +219,7 @@ function Cart({ product, Setting }) {
                                     <div className='product-section mt-3 p-3'>
                                         <div className="d-flex justify-content-start align-items-center">
                                             <img src={product?.featured_image || Banner} className='img-fluid' style={{ width: "50px", height: "50px" }} alt="Product" />
-                                            <label className="form-check-label ms-3">{product?.name}</label>
+                                            <label className="form-check-label ms-3"> {product?.name.slice(0, 12)}... </label>
                                             <div className="quantity-controls d-flex align-items-center">
                                         <button type="button" className='btn decr' onClick={handleDecrement}>-</button>
                                         <span className='mx-3'>{quantity}</span>

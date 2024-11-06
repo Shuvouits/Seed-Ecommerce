@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'BangalFont';
+  src: url('../public/font/Hind_Siliguri/HindSiliguri-Bold.ttf') format('ttf'),
+   
+}
 body {
   background: #e0ffef;
 }
@@ -307,3 +312,9 @@ body {
 }
 
 /*Loader end*/
+
+
+.cart-section h5.title {
+  text-align: center;
+  font-family: 'BangalFont', sans-serif;
+}
