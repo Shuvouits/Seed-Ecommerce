@@ -3,7 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import axios from 'axios';
 import styles from './Home.module.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
-
+import Loader from '../component/loader';
 export default function Home() {
   const { productId } = useParams();
   const [productData, setProductData] = useState([]);
@@ -28,7 +28,7 @@ export default function Home() {
   }, [productId]);
 
   if (loading) {
-    return <div className={styles.loading}>Loading...</div>;
+    return <Loader/>;
   }
 
   if (error) {

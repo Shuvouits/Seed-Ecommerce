@@ -176,9 +176,10 @@ export default function Index({ productData,Setting }) {
                 <section className={styles.callForNeed}>
                     যে কোন প্রয়োজনে কল করুন 01886238827
                 </section>
+                <Cart product={productData} Setting={Setting} />
             </div>
             
-      <Cart product={productData} Setting={Setting} />
+
         </div>
     );
 }

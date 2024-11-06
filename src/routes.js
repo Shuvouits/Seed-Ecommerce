@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Route, Routes, useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
-
+import Loader from './component/loader';
 import Template2 from "./templates/template-2/index";
 import Template1 from "./templates/template-1/index";
 import Home from './templates/Home';
@@ -33,7 +33,7 @@ function TemplateWithData() {
   }, [productId]); // Re-fetch when productId changes
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <Loader/>;
   }
 
   if (error) {

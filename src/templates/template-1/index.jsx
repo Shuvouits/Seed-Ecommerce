@@ -35,18 +35,18 @@ function Home({ productData,Setting }) {
 
         <PriceSection previousPrice={productData?.previous_price} Price={productData?.price} />
 
-       
-
-      </div>
-
-      <div className='background-text-section mt-5'>
+        <div className='background-text-section mt-5 mb-5 '>
         <h2 className='text-center fw-bold'> {productData?.name ? productData?.name :'আমাদের কাছে কেনো কিনবেন ?' }</h2>
 
       </div>
-
       <Content section_title={productData?.section_title} product_description={productData?.product_description} productImage={productData?.first_image} />
 
-      <Cart product={productData} Setting={Setting} />
+<Cart product={productData} Setting={Setting} />
+      </div>
+
+      
+
+      
 
 
     </>

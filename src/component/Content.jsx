@@ -5,9 +5,9 @@ function Content({section_title,product_description,productImage}) {
   return (
     <>
 
-<div className='content-section container mt-5'>
+<div className='content-section container'>
 
-<div className='row d-flex align-items-center'>
+<div className='row d-flex align-items-center justify-content-center'>
 
   <div className='text-area col-md-6' style={{ fontSize: "19px" }}>
   <div dangerouslySetInnerHTML={{ __html: product_description }} />

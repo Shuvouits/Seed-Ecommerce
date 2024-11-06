@@ -93,8 +93,8 @@ function Cart({ product, Setting }) {
 
     return (
         <>
-            <div className='cart-section mt-5'>
-                <div className='container cart-container'>
+            <div className='cart-section'>
+                <div className='cart-container'>
                     <div className='row'>
                         <div className='col-md-12'>
                             <h5>Customer Information</h5>
