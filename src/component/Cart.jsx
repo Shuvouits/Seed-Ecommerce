@@ -263,7 +263,7 @@ function Cart({ product, Setting }) {
                                             />
                                             <button 
                                                 type="button"
-                                                className='btn custom-btn'
+                                                className='btn custom-btn btn-cuppon-apply'
                                                 onClick={handleApplyCoupon}
                                             >
                                                 Apply
@@ -276,10 +276,10 @@ function Cart({ product, Setting }) {
 
                                 <button 
                                             type="submit" 
-                                            className='btn custom-btn w-100 mt-3'
+                                            className='btn custom-btn w-100 mt-3 btn-submit'
                                             disabled={loading}
                                         >
-                                            <span style={{ fontSize: "20px" }}>
+                                            <span style={{ fontSize: "25px" }}>
                                                 {loading ? 'Processing...' : 'অর্ডার নিশ্চিত করুন'}
                                             </span>
                                         </button>

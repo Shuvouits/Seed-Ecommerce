@@ -42,8 +42,9 @@
 }
 
 .form-check-input:checked {
-    background-color: #07af00;
-    border-color: black;
+  background-color: #07af00;
+  border-color: #000000;
+  border-width: 2px;
 }
 
 .custom-radio-size {
@@ -59,7 +60,7 @@
 
     border : 2px solid #07af00;
     background : #e0ffef;
-
+    height: 50px;
   }
 
   .custom-btn{
@@ -84,8 +85,17 @@
     border-right : 5px solid #07af00;
     padding: 20px;
     border-radius: 15px;
+    font-weight: 600;
   }
-
+  .cart-section .cart-container .btn-submit {
+    border-radius: 20px;
+    font-weight: 600;
+}
+.cart-section .cart-container .btn-cuppon-apply {
+  padding: 7px 30px;
+  font-weight: 500;
+  font-size: 22px;
+}
 
 /* Circled discounted price */
 .circled-price {
@@ -144,7 +154,6 @@
   font-size: 22px;
 }
 
-.payment-option {}
 
 .payment-option .form-check {
   display: flex;
@@ -216,3 +225,4 @@
   width: 48%;
   padding-right: 20px;
 }
+
