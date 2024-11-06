@@ -52,6 +52,7 @@
 
   .product-section, .order-section{
     background : #b6ffd4;
+    border-radius: 20px;
   }
 
   .custom-input{
@@ -85,9 +86,6 @@
     border-radius: 15px;
   }
 
-  /* price section animation  */
-
-  /* Crossed-out price */
 
 /* Circled discounted price */
 .circled-price {
@@ -132,3 +130,89 @@
 }
 
 
+
+
+
+
+.container.cart-container .attributes {
+  grid-column-gap: 10px;
+  align-items: center;
+}
+
+.container.cart-container .attributes p {
+  margin: 0;
+  font-size: 22px;
+}
+
+.payment-option {}
+
+.payment-option .form-check {
+  display: flex;
+}
+
+.shippingoption {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  grid-column-gap: 15px;
+}
+
+.shippingoption .form-check {
+  display: flex;
+  align-items: center;
+  background: #b6ffd5;
+  padding: 12px 29px 12px 40px;
+  font-weight: 500;
+  border-radius: 10px;
+  grid-column-gap: 10px;
+  width: -webkit-fill-available;
+}
+
+.shippingoption .form-check input {
+  width: 25px;
+  height: 25px;
+}
+
+
+.quantity-controls {
+  border: 2px solid #000000;
+  border-radius: 20px;
+}
+
+.quantity-controls button {
+  border: none;
+}
+
+.quantity-controls button.btn.incr {
+  border-left: 2px solid;
+  border-radius: unset;
+  font-weight: 900;
+  font-size: 18px;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  color: black;
+}
+.quantity-controls button.btn.decr {
+  border-right: 2px solid;
+  border-radius: unset;
+  font-weight: 900;
+  font-size: 18px;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  color: black;
+}
+.quantity-controls button:hover {
+  background: unset;
+  color: unset;
+}
+.quantity-controls button:active {
+  background-color: unset;
+  background: unset;
+  color: unset;
+}
+.product-section label {
+  width: 48%;
+  padding-right: 20px;
+}
