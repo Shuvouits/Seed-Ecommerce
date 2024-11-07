@@ -318,3 +318,8 @@ body {
   text-align: center;
   font-family: 'BangalFont', sans-serif;
 }
+
+.home .container {
+  background: unset;
+  margin: auto;
+}

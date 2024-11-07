@@ -3,6 +3,7 @@ import styles from './index.module.css';
 import PrereviewImageLeft from "./220-SM837746.jpg";
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import Cart from '../../component/Cart'
+
 export default function Index({ productData,Setting }) {
     const [currentReview, setCurrentReview] = useState(0);
     const [touchStart, setTouchStart] = useState(0);
