@@ -67,7 +67,7 @@ function Cart({ product, Setting }) {
 
             const response = await apiClient.post('/api-orders', orderData);
 
-            if (response.data.status === 'success') {
+            if (response.status === 201) {
                 alert('Order placed successfully!');
             }
         } catch (err) {
