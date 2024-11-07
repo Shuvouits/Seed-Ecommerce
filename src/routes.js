@@ -18,12 +18,13 @@ function TemplateWithData() {
     const fetchProductData = async () => {
       try {
         const response = await axios.get(`http://127.0.0.1:8000/api/product/${productId}`);
+
         const setting = await axios.get(`http://127.0.0.1:8000/api/products/setting`);
         setProductData(response.data);
         setSetting(setting.data);
         setLoading(false);
       } catch (error) {
-        setError('Failed to fetch product data');
+        setError('Failed to fetch product data '+error);
         setLoading(false);
         console.error('Error fetching product data:', error);
       }
@@ -41,11 +42,11 @@ function TemplateWithData() {
   }
 
   // Render different templates based on templateId
-switch (productData[0].template_id) {
+switch (productData.template_id) {
     case 1:
-      return <Template1 productData={productData[0]} Setting={Setting} />;
+      return <Template1 productData={productData} Setting={Setting} />;
     case 2:
-      return <Template2 productData={productData[0]} Setting={Setting} />;
+      return <Template2 productData={productData} Setting={Setting} />;
     // Add more templates as needed
     default:
       return <div>Template not found</div>;

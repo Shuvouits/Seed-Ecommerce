@@ -269,11 +269,11 @@ export default function Home() {
                 <div className="product">
                     <div className="img">
                         <div className="new">New</div>
-                        <Link to="product/arai-mithai.html" className="d-block">
+                        <Link to={`/${product.slug}`} className="d-block">
                             <img src={product.featured_image} alt={product.name} loading="lazy"/>
                         </Link>
                         <div className="cart-btn">
-                            <Link Link to={`/${product.id}`} className="single-link">
+                            <Link Link to={`/${product.slug}`} className="single-link">
                                 <span className="material-icons-outlined">
                                     visibility
                                 </span>
