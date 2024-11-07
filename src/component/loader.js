@@ -3,7 +3,7 @@ import React from 'react'
 export default function Loader() {
   return (
     <div className='loading'>
-      <div class="loader-bars">
+      <div className="loader-bars">
     <div></div><div></div><div></div><div></div>
     <div></div><div></div><div></div><div></div>
   </div>

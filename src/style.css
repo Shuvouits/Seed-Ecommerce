@@ -323,3 +323,26 @@ body {
   background: unset;
   margin: auto;
 }
+
+section#trending .owl-carousel.category-carousel.owl-loaded.owl-drag {
+  display: flex;
+  grid-column-gap: 50px;
+  padding: 20px;
+}
+
+#products .content .product .img {
+
+  height: 90% !important;
+}
+#products .content .product .img a {
+  height: 94% !important;
+}
+
+#products .content .product .description {
+
+  height: 10% !important;
+}
+#products .content .product .img img {
+  height: 100%;
+  object-fit: cover;
+}
