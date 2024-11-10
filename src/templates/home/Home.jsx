@@ -4,6 +4,12 @@ import axios from 'axios';
 import styles from './Home.module.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import Loader from '../../component/loader';
+import Topbar from '../../component/home/Topbar';
+import Header from "../../component/home/Header.jsx"
+import Category from '../../component/home/Category.jsx';
+import Care from '../../component/home/Care.jsx';
+
+
 export default function Home() {
     const { productId } = useParams();
     const [productData, setProductData] = useState([]);
@@ -51,129 +57,11 @@ export default function Home() {
 
     return (
         <div className='home'>
-            <div>
-                <Link className="call-to-btn" to="tel:01601901566">
-                    <span className="material-icons-outlined me-1">
-                        call
-                    </span>
-                    01601901566
-                </Link>
-            </div>
 
 
-            <section id="top">
-                <div className="container">
-                    <div className="content">
-                        <div className="left d-flex align-items-center">
-                            <span className="material-icons-outlined me-1">
-                                call
-                            </span>
-                            <Link to="callto:01601901566" className="call">01601901566</Link>
-                        </div>
-                        <div className="center d-flex align-items-center">
-                            <span className="material-icons-outlined me-1">
-                                auto_fix_normal
-                            </span>
-                            Discover the Power of Nature with softexel
-                        </div>
+            <Topbar />
 
-                        <div className="right d-flex align-items-center">
-                            <div className="d-flex align-items-center me-2">
-                                <span className="material-icons-outlined me-1">
-                                    help_outline
-                                </span>
-
-                                <Link to="tel:8801601901566" title="8801601901566">Customer Help</Link>
-                            </div>
-                            <div>
-                                <div className="dropdown lang">
-                                    <div className="head dropdown-toggle" type="button" data-bs-toggle="dropdown">
-                                        <img className="flag" src="fontend/img/bd.svg" alt="" loading="lazy" />
-                                        <span className="label">EN</span>
-                                    </div>
-                                    <ul className="dropdown-menu">
-                                        <div className="item">
-                                            <Link className="dropdown-item" to="#">
-                                                <img className="flag" src="fontend/img/bd.svg" alt="" loading="lazy" />
-                                                <span className="label">BD</span>
-                                            </Link>
-                                        </div>
-                                        <div className="item">
-                                            <Link className="dropdown-item" to="#">
-                                                <img className="flag" src="fontend/img/us.svg" alt="" loading="lazy" />
-                                                <span className="label">EN</span>
-                                            </Link>
-                                        </div>
-                                    </ul>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <header id="nav">
-                <div className="container">
-                    <nav className="navbar navbar-expand-lg navbar-dark">
-                        <Link className="navbar-brand" to="index.html">
-                            <img className="main-logo" src="fontend/img/softexel-logofibal-1.webp" alt="" style={{ width: '200px' }} loading="lazy" />
-                        </Link>
-                        <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                            aria-expanded="false" aria-label="Toggle navigation">
-                            <span className="navbar-toggler-icon"></span>
-                        </button>
-                        <div className="collapse form-menu navbar-collapse" id="navbarSupportedContent">
-                            <div className="nav-menu">
-                                <form className="d-flex search" role="search" action="https://www.softexel.com/shop" method="GET">
-                                    <div className="input-group">
-                                        <span className="input-group-text">
-                                            <span className="material-icons-outlined">
-                                                search
-                                            </span>
-                                        </span>
-                                        <input className="form-control" type="search" name="search" placeholder="Search in Naturo" />
-                                        <button className="btn input-group-text search-btn">
-                                            Search
-                                        </button>
-                                    </div>
-                                </form>
-                                <div className="right">
-                                    <div className="user-info">
-
-                                        <div className="name">
-
-                                            <div className="tagline"><Link to="login.html">Login</Link></div>
-
-
-                                        </div>
-                                    </div>
-                                    <div className="favorite badge-icon">
-
-                                    </div>
-
-                                    <Link to="order/summery.html" className="cart-area">
-                                        <div className="cart badge-icon">
-                                            <span className="material-icons-outlined">
-                                                shopping_cart
-                                            </span>
-                                            <span className="badge-tag" id="totalCartCount">
-                                                0
-                                            </span>
-                                        </div>
-                                        <div className="cart-text">
-                                            Cart
-                                            <div>
-
-                                            </div>
-                                        </div>
-                                    </Link>
-                                </div>
-                            </div>
-                        </div>
-                    </nav>
-                </div>
-            </header>
+            <Header />
 
             <div className={styles.slider}>
                 <button onClick={handlePrevSlide} className={styles.arrowButton}>❮</button>
@@ -186,81 +74,13 @@ export default function Home() {
                 <button onClick={handleNextSlide} className={styles.arrowButton}>❯</button>
             </div>
 
+            <Category />
 
 
-            <section id="trending">
-                <div className="container">
-                    <div className="content">
-                        <div className="owl-carousel category-carousel owl-loaded owl-drag">
-                            <Link className="item" to="#">
-                                <img className="icon" src="storage/ggaJSilyldtpzB2VAm6YLIcIgVfQbPSiLuGDHIlj.png" alt=""
-                                    loading="lazy" />
-                                <p className="caption">Trending</p>
-                            </Link>
-                            <Link className="item" to="#7">
-                                <img className="icon" src="storage/THqSJcY9Jqfhh6jdrPXb9zDC3XmpRuMVO3eiGp8E.png" alt=""
-                                    loading="lazy" />
-                                <p className="caption">Honey</p>
-                            </Link>
-                            <Link className="item" to="#">
-                                <img className="icon" src="storage/G392CBn4RHwJiRv0O8FlXUyYkM28QW3J6vRRvEFl.png" alt=""
-                                    loading="lazy" />
-                                <p className="caption">Herbs</p>
-                            </Link>
-                            <Link className="item" to="#">
-                                <img className="icon" src="storage/2dInVJ0aFXSsXs2lm2pZGPlcQJwLojZKwW6iXdG4.png" alt=""
-                                    loading="lazy" />
-                                <p className="caption">Combo</p>
-                            </Link>
-                            <Link className="item" to="#">
-                                <img className="icon" src="storage/moq4gOR8R5l2IFeLD9qAdG1gHcOOKAovO0KtsK8D.png" alt=""
-                                    loading="lazy" />
-                                <p className="caption">Seeds</p>
-                            </Link>
-                            <Link className="item" to="#">
-                                <img className="icon" src="storage/OAjt7XmdsmK56lfSyEVHGjAMYtd0rud2KN5wxLN1.png" alt=""
-                                    loading="lazy" />
-                                <p className="caption">Nuts</p>
-                            </Link>
-                            <Link className="item" to="#">
-                                <img className="icon" src="storage/v65PdkCWnRHfCWvkp4TJxRF1YBAAFxzEOcS7VOe3.png" alt=""
-                                    loading="lazy" />
-                                <p className="caption">Dates</p>
-                            </Link>
-                            <Link className="item" to="#">
-                                <img className="icon" src="storage/kXBlCZ2WrKSjf4FS0sL832u3C7ixnC1isU4u3ar5.png" alt=""
-                                    loading="lazy" />
-                                <p className="caption">Dry Fruits</p>
-                            </Link>
-                            <Link className="item" to="#">
-                                <img className="icon" src="storage/XnxSkpu2A1AKiEd7L5vhcFn5Xmtcu9EnC2kUhdIq.png" alt=""
-                                    loading="lazy" />
-                                <p className="caption">Baby Food</p>
-                            </Link>
-                            <Link className="item" to="#">
-                                <img className="icon" src="storage/u5raG6K8XtlFWVhafbELRTuLFGowCp74ivRT7UAv.png" alt=""
-                                    loading="lazy" />
-                                <p className="caption">Tea</p>
-                            </Link>
-                            <Link className="item" to="#">
-                                <img className="icon" src="storage/jHrW3ZPmz6GPGfCDE2n50Xgcl1oGqjXSNLq4uYyx.png" alt=""
-                                    loading="lazy" />
-                                <p className="caption">Shorbot</p>
-                            </Link>
-                            <Link className="item" to="#">
-                                <img className="icon" src="storage/33FEGesIn4f1mBvQv0BjaP8Pt3NyU9yUADxKHuoh.png" alt=""
-                                    loading="lazy" />
-                                <p className="caption">Ghee &amp; Oil</p>
-                            </Link>
-                            <Link className="item" to="#">
-                                <img className="icon" src="storage/MLBW7OYh6b80ckWAi2Xo8F4Gv3SbzVE0XbFkJrIS.png" alt=""
-                                    loading="lazy" />
-                                <p className="caption">All</p>
-                            </Link>
-                        </div>
-                    </div>
-                </div>
-            </section>
+
+
+
+
             <section id="products">
                 <div className="container-fluid">
                     <div className="content">
@@ -311,51 +131,11 @@ export default function Home() {
                     </div>
                 </div>
             </section>
-            <section id="care">
-                <div className="overlay">
-                    <div className="container-fluid">
-                        <div className="content">
-                            <div className="">
-                                <h2 className="title">
-                                    We CARE
-                                </h2>
-                                <p className="tagline">The more we care for the earth, the better our product</p>
-                                <div className="cares">
 
-                                    <div className="care">
-                                        <img className="care-img" src="storage/FSVgff54fZUuxsodKuyOKViYRGBa69JpkmNP3IgR.png" alt=""
-                                            loading="lazy" />
-                                    </div>
 
-                                    <div className="care">
-                                        <img className="care-img" src="storage/Qm6Iv0lZQ1kwVbKPTTNibROyZEvpC1kvh0xaKkqS.png" alt=""
-                                            loading="lazy" />
-                                    </div>
+            <Care />
 
-                                    <div className="care">
-                                        <img className="care-img" src="storage/yeo3M3DYnbWhXxZt80fAcGipICs4aJ8jVjSYoal9.png" alt=""
-                                            loading="lazy" />
-                                    </div>
 
-                                    <div className="care">
-                                        <img className="care-img" src="storage/6Ei1RZyUJGDeW8FgN64ZEEykWotkDDI4HtqFceE1.png" alt=""
-                                            loading="lazy" />
-                                    </div>
-                                </div>
-
-                                <div className="text-center">
-                                    <Link to="#" className="btn more-btn">
-                                        Find More On Blog
-                                        <span className="material-icons-outlined">
-                                            chevron_right
-                                        </span>
-                                    </Link>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
             <section id="testimonial_custom">
                 <div className="container-fluid">
                     <div className="content">
