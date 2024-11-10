@@ -4,7 +4,7 @@ import axios from 'axios';
 import Loader from './component/loader';
 import Template2 from "./templates/template-2/index";
 import Template1 from "./templates/template-1/index";
-import Home from './templates/Home';
+import Home from './templates/home/Home';
 
 // Template component with dynamic ID
 function TemplateWithData() {
